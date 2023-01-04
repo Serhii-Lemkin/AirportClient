@@ -1,0 +1,33 @@
+<div class="table-responsive-xxl">
+  <table class="table table-primary">
+    <thead>
+      <th><h1 style>Table of TakeOffs</h1></th>
+    </thead>
+  </table>
+
+<div class="table-responsive-xxl">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th></th>
+        <th scope="col">Name</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Station</th>
+        <th scope="col">Finished</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let p of ls.planes">
+        <ng-container *ngIf="p.finished == false">
+          <tr class="">
+            <td><img src="/assets/Images/red.png" /></td>
+            <td scope="row">{{ p.planeName }}</td>
+            <td scope="row">{{ p.destination }}</td>
+            <td scope="row">{{ p.currentStation }}</td>
+            <td scope="row">{{ p.finished }}</td>
+          </tr>
+        </ng-container>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

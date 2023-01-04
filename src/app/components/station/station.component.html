@@ -1,0 +1,17 @@
+<div>
+  <h2>{{ stationName }}</h2>
+  <ng-container *ngIf="sr.data">
+    <ng-container *ngIf="sr.data.destination == 'land'">
+      <img
+        src="/assets/Images/gray.png"
+      />
+      <h3>{{ sr.data.planeName }}</h3>
+    </ng-container>
+    <ng-container *ngIf="sr.data.destination != 'land'">
+      <img
+        src="/assets/Images/red.png"
+      />
+      <h3>{{ sr.data.planeName }}</h3>
+    </ng-container>
+  </ng-container>
+</div>

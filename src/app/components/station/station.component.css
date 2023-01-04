@@ -1,0 +1,11 @@
+div {
+  display: block;
+
+  text-align: center;
+}
+img {
+  height: 35px;
+}
+h2 {
+  position: relative;
+}

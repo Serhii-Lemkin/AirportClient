@@ -1,0 +1,27 @@
+<div class="table-responsive-xxl">
+    <table class="table table-secondary">
+        <thead>
+            <tr>
+                <th scope="col">Station</th>
+                <th scope="col">Plane</th>
+                <th scope="col">Destination</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let s of stations">
+
+                <tr class="">
+                    <td scope="row">{{s.stationName}}</td>
+                    <td><ng-container *ngIf="s.currentPlane?.destination == 'land' "><img
+        src="/assets/Images/gray.png"
+      /></ng-container>
+      <ng-container *ngIf="s.currentPlane?.destination == 'takeOff' "><img
+        src="/assets/Images/red.png"
+      /></ng-container>
+                        {{s.currentPlane?.planeName}}</td>
+                    <td>{{s.currentPlane?.destination}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
