@@ -11,7 +11,8 @@ import { TablesComponent } from './components/tables/tables.component';
 import { routing } from 'src/app/routing.module';
 import { NavComponent } from './components/nav/nav.component';
 import { TableoutcomingComponent } from './components/tableoutcoming/tableoutcoming.component';
-import { TablestateComponent } from './components/tablestate/tablestate.component';
+import { HistoryComponent } from './components/history/history.component';
+import { HistoryDetailesComponent } from './components/history-detailes/history-detailes.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { TablestateComponent } from './components/tablestate/tablestate.componen
     TablesComponent,
     NavComponent,
     TableoutcomingComponent,
-    TablestateComponent
+    HistoryComponent,
+    HistoryDetailesComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpClientModule, routing],
   providers: [],

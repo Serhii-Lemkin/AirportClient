@@ -1,0 +1,26 @@
+<div class="container">
+  <h1>Plane {{ ds.plane?.planeName }}</h1>
+  <h2>
+    Destination {{ ds.plane?.destination == "land" ? "Landing" : "Taking Off" }}
+  </h2>
+  <div class="table-responsive-xxl">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <th scope="col">Date</th>
+          <th scope="col">Station</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let r of ds.data">
+          <tr class="">
+            <td scope="row">{{ r.timeOfAction | date : "medium" }}</td>
+            <td>{{ r.currentStation }}</td>
+            <td>{{ r.finished ? "Route Finished" : "En Route" }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

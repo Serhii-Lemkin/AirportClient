@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import Plane from '../models/plane';
 import * as signalR from '@microsoft/signalr';
+import { HttpClient } from '@angular/common/http';
+import StationState from '../models/stationState';
 
 @Injectable({
   providedIn: 'root',
@@ -20,6 +22,8 @@ export default class SrService {
       .then(() => console.log('Connection started'))
       .catch((err) => console.log('Error while starting connection: ' + err));
   };
+
+  
 
   public addTransferChartDataListener = (station: string) => {
     this.hubConnection.on(station, (data) => {

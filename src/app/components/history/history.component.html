@@ -1,0 +1,45 @@
+<div>
+
+</div>
+
+<div class="table-responsive container">
+  <table class="table table-primary">
+    <thead>
+      <tr>
+        <th scope="col">Record Id</th>
+        <th scope="col">PlaneName</th>
+        <th scope="col">Img</th>
+        <th scope="col">Destination</th>
+        <th scope="col">Date of first call</th>
+        <th scope="col">See Logs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let p of hs.data">
+        <tr class="">
+          <td scope="row">{{ p.id }}</td>
+          <td>{{ p.planeName }}</td>
+          <td>
+            <ng-container *ngIf="p.destination == 'land'">
+              <img src="/assets/Images/gray.png" />
+            </ng-container>
+            <ng-container *ngIf="p.destination == 'takeOff'">
+              <img src="/assets/Images/red.png" />
+            </ng-container>
+          </td>
+          <td>{{ p.destination == "land" ? "Landing" : "Takeoff" }}</td>
+          <td>{{ p.dateCreated | date : "short" }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="detales(p.planeName)"
+            >
+              See Log
+            </button>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

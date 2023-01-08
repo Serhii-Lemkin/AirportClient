@@ -1,20 +1,22 @@
-<div class="table-responsive-xxl">
-  <table class="table table-primary">
-    <thead>
-      <th><h1 style>Table of Landings</h1></th>
-    </thead>
-  </table>
-</div>
+<div class="container">
 
-<div class="table-responsive-xxl">
-  <table class="table table-primary">
-    <thead>
-      <tr>
-        <th scope="col"></th>
-        <th scope="col">Name</th>
-        <th scope="col">Destination</th>
-        <th scope="col">Station</th>
-        <th scope="col">Finished</th>
+  <div class="table-responsive-xxl">
+    <table class="table table-primary">
+      <thead>
+        <th><h1 style>Table of Landings</h1></th>
+      </thead>
+    </table>
+  </div>
+  
+  <div class="table-responsive-xxl">
+    <table class="table table-primary">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Station</th>
+        <th scope="col">Time</th>
       </tr>
     </thead>
     <tbody>
@@ -25,10 +27,12 @@
             <td scope="row">{{ p.planeName }}</td>
             <td scope="row">{{ p.destination }}</td>
             <td scope="row">{{ p.currentStation }}</td>
-            <td scope="row">{{ p.finished }}</td>
+            <td scope="row">{{ p.timeOfAction | date : "medium" }}</td>
           </tr>
         </ng-container>
       </ng-container>
     </tbody>
   </table>
+</div>
+
 </div>

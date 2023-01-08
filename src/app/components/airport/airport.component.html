@@ -1,14 +1,59 @@
 <div class="center-fit">
   <div class="grid-container">
-      <div class="s1 cont"><app-station stationName="Take Off"></app-station></div>
-      <div class="s2 cont"><app-station stationName="Runway"></app-station></div>
-      <div class="s3 cont"><app-station stationName="Landing Stage 3"></app-station></div>
-      <div class="s4 cont"><app-station stationName="Landing Stage 2"></app-station></div>
-      <div class="s5 cont"><app-station stationName="Landing Stage 1"></app-station></div>
-      <div class="s6 cont"><app-station stationName="Arrival Path"></app-station></div>
-      <div class="s7 cont"><app-station stationName="Departure Path"></app-station></div>
-      <div class="s8 cont"></div>
-      <div class="s9 cont"><app-station stationName="Terminal 1"></app-station></div>
-      <div class="s10 cont"><app-station stationName="Terminal 2"></app-station></div>
+    <div class="s1 cont">
+      <app-station
+        [currentPlane]="stations[8].currentPlane"
+        stationName="Take Off"
+      ></app-station>
+    </div>
+    <div class="s2 cont">
+      <app-station
+        [currentPlane]="stations[3].currentPlane"
+        stationName="Runway"
+      ></app-station>
+    </div>
+    <div class="s3 cont">
+      <app-station
+        [currentPlane]="stations[2].currentPlane"
+        stationName="Landing Stage 3"
+      ></app-station>
+    </div>
+    <div class="s4 cont">
+      <app-station
+        [currentPlane]="stations[1].currentPlane"
+        stationName="Landing Stage 2"
+      ></app-station>
+    </div>
+    <div class="s5 cont">
+      <app-station
+        [currentPlane]="stations[0].currentPlane"
+        stationName="Landing Stage 1"
+      ></app-station>
+    </div>
+    <div class="s6 cont">
+      <app-station
+        [currentPlane]="stations[4].currentPlane"
+        stationName="Arrival Path"
+      ></app-station>
+    </div>
+    <div class="s7 cont">
+      <app-station
+        [currentPlane]="stations[7].currentPlane"
+        stationName="Departure Path"
+      ></app-station>
+    </div>
+    <div class="s8 cont"></div>
+    <div class="s9 cont">
+      <app-station
+        [currentPlane]="stations[5].currentPlane"
+        stationName="Terminal 1"
+      ></app-station>
+    </div>
+    <div class="s10 cont">
+      <app-station
+        [currentPlane]="stations[6].currentPlane"
+        stationName="Terminal 2"
+      ></app-station>
     </div>
   </div>
+</div>
